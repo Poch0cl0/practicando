@@ -50,12 +50,3 @@ def include_template(template_name):
     with open(template_path, 'r') as template:
         return template.read()
 # Ejemplos de uso
-
-def include_template(template_name):
-    """Función que permite inclusión de archivos arbitrarios"""
-    # VULNERABLE: permite ../../../etc/passwd
-    template_path = "./templates/" + template_name
-    
-    with open(template_path, 'r') as template:
-        return template.read()
-# Ejemplos de uso
